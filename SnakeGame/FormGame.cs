@@ -11,6 +11,7 @@ namespace SnakeGame
         private int meatY { get; set; }
         private List<List<int>> shapeList { get; set; }
         private int direction { get; set; }
+        public int timerMiliSeconds { get; set; }
 
         public FormGame()
         {
@@ -20,6 +21,8 @@ namespace SnakeGame
         private void Form1_Shown(object sender, EventArgs e)
         {
             shapeList = new List<List<int>>();
+
+            timer1.Interval = timerMiliSeconds;
 
             direction = 3;
 
